@@ -1,19 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,q,r,s=0;
+    int n,n1,reverse=0,rem;
     scanf("%d",&n);
-    q=n;
-    while(q!=0)
+    n1=n;
+    while (n)
     {
-       r=q%10;
-       q=q/10;
-       s=s*10+r;
+        rem=n%10;
+        reverse=(reverse*10)+rem;
+        n=n/10;
     }
-    if(n==s)
+    if (n1==reverse)
     printf("True");
     else
     printf("False");
-}
-       
-    
+}    
