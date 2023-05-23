@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,rem,l=0;
+    int n,rem,larg=0;
     scanf("%d",&n);
     while(n>0)
     {
         rem=n%10;
-        if(rem>l)
+        if(larg < rem)
         {
-            l=rem;
+            larg = rem;
         }
         n=n/10;
-        }
-        printf("%d",l);
+    }
+    printf("%d",larg);
 }
